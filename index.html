@@ -8,7 +8,302 @@
 <meta content="#0a0f1d" name="theme-color"/>
 <title>IIT Bombay Fresher Guide — Physics</title>
 <link href="./styles.css" rel="stylesheet"/>
-</head>
+<style id="homepage-critical-layout">
+/* Critical homepage layout — intentionally embedded for deployment stability */
+body.home #guide-grid.dashboard-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  grid-auto-flow: row !important;
+  grid-auto-rows: minmax(292px, auto) !important;
+  gap: 14px !important;
+  align-items: stretch !important;
+}
+
+body.home #guide-grid > .dashboard-card.card-equal {
+  position: relative !important;
+  grid-column: span 1 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 292px !important;
+  height: 100% !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+body.home #guide-grid .open-card {
+  display: none !important;
+}
+
+body.home #guide-grid .dashboard-card-content {
+  position: absolute !important;
+  z-index: 3 !important;
+  left: 24px !important;
+  right: 24px !important;
+  bottom: 20px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: calc(100% - 105px) !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+body.home #guide-grid .dashboard-card-content h2 {
+  max-width: 100% !important;
+  margin: 5px 0 8px !important;
+  overflow: hidden !important;
+  color: #fff !important;
+  font-size: clamp(1.52rem, 1.82vw, 2.1rem) !important;
+  line-height: 1.02 !important;
+  text-wrap: balance !important;
+}
+
+body.home #guide-grid .dashboard-card-content > p:not(.card-label) {
+  display: -webkit-box !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  color: rgba(255,255,255,.92) !important;
+  font-size: .82rem !important;
+  line-height: 1.45 !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 3 !important;
+}
+
+body.home #guide-grid .card-label {
+  max-width: 100% !important;
+  overflow: hidden !important;
+  color: rgba(255,255,255,.78) !important;
+  font-size: .59rem !important;
+  line-height: 1.35 !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+body.home #guide-grid .mini-links {
+  display: flex !important;
+  max-height: 29px !important;
+  margin-top: 10px !important;
+  overflow: hidden !important;
+  flex-wrap: nowrap !important;
+}
+
+body.home #guide-grid .mini-links span {
+  flex: 0 0 auto !important;
+  padding: 5px 8px !important;
+  font-size: .59rem !important;
+}
+
+body.home #guide-grid .card-symbol {
+  display: grid !important;
+  width: 44px !important;
+  height: 44px !important;
+  flex: 0 0 44px !important;
+  place-items: center !important;
+  border-radius: 14px !important;
+  font-size: 1.22rem !important;
+}
+
+body.home #guide-grid .card-equation {
+  display: none !important;
+}
+
+body.home #guide-grid .emergency-card .dashboard-card-content h2 {
+  font-size: clamp(1.4rem, 1.64vw, 1.9rem) !important;
+}
+
+body.home #guide-grid .emergency-card .emergency-number {
+  margin-top: 7px !important;
+  font-size: 2.12rem !important;
+}
+
+.home-footer-stable {
+  width: 100% !important;
+  margin-top: 18px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(95,216,230,.18) !important;
+  border-radius: 22px !important;
+  background:
+    radial-gradient(circle at 0 0, rgba(95,216,230,.10), transparent 20rem),
+    radial-gradient(circle at 100% 100%, rgba(183,148,223,.09), transparent 20rem),
+    linear-gradient(135deg, rgba(12,27,48,.98), rgba(8,16,30,.98)) !important;
+  color: #fff !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 18px 46px rgba(1,5,14,.28) !important;
+}
+
+.home-footer-top {
+  display: grid !important;
+  grid-template-columns: minmax(230px,.9fr) minmax(420px,1.7fr) auto !important;
+  gap: 18px !important;
+  align-items: center !important;
+  padding: 18px 20px !important;
+}
+
+.home-footer-brand {
+  display: flex !important;
+  min-width: 0 !important;
+  align-items: center !important;
+  gap: 11px !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.home-footer-brand > span:first-child {
+  display: grid !important;
+  width: 43px !important;
+  height: 43px !important;
+  flex: 0 0 43px !important;
+  place-items: center !important;
+  border: 1px solid rgba(95,216,230,.34) !important;
+  border-radius: 50% !important;
+  background: rgba(95,216,230,.09) !important;
+  color: #5fd8e6 !important;
+  font-size: 1.35rem !important;
+}
+
+.home-footer-brand > span:last-child {
+  display: grid !important;
+  min-width: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.home-footer-brand strong {
+  color: #f5f7fb !important;
+  font-size: .82rem !important;
+}
+
+.home-footer-brand small {
+  margin-top: 4px !important;
+  color: #8f9daf !important;
+  font-size: .64rem !important;
+}
+
+.home-footer-nav {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 6px !important;
+}
+
+.home-footer-nav a {
+  padding: 7px 9px !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,.035) !important;
+  color: #bdc9d8 !important;
+  font-size: .64rem !important;
+  font-weight: 650 !important;
+  text-decoration: none !important;
+}
+
+.home-footer-emergency {
+  justify-self: end !important;
+  padding: 9px 12px !important;
+  border: 1px solid rgba(237,120,109,.42) !important;
+  border-radius: 12px !important;
+  background: rgba(237,120,109,.10) !important;
+  color: #ffd8d4 !important;
+  font-size: .69rem !important;
+  font-weight: 760 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+.home-footer-bottom {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+  padding: 11px 20px !important;
+  border-top: 1px solid rgba(255,255,255,.07) !important;
+  background: rgba(3,8,17,.20) !important;
+  color: #8290a3 !important;
+  font-size: .62rem !important;
+}
+
+.home-footer-bottom strong {
+  color: #dce4ee !important;
+}
+
+@media (max-width: 1220px) {
+  body.home #guide-grid.dashboard-grid {
+    grid-template-columns: repeat(3, minmax(0,1fr)) !important;
+    grid-auto-rows: minmax(285px, auto) !important;
+  }
+  .home-footer-top {
+    grid-template-columns: 1fr !important;
+  }
+  .home-footer-nav {
+    justify-content: flex-start !important;
+  }
+  .home-footer-emergency {
+    justify-self: start !important;
+  }
+}
+
+@media (max-width: 900px) {
+  body.home #guide-grid.dashboard-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+    grid-auto-rows: minmax(260px, auto) !important;
+  }
+  body.home #guide-grid > .dashboard-card.card-equal {
+    min-height: 260px !important;
+  }
+}
+
+@media (max-width: 620px) {
+  body.home #guide-grid.dashboard-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+    grid-auto-rows: minmax(225px, auto) !important;
+    gap: 9px !important;
+  }
+  body.home #guide-grid > .dashboard-card.card-equal {
+    min-height: 225px !important;
+  }
+  body.home #guide-grid .dashboard-card-content {
+    left: 14px !important;
+    right: 14px !important;
+    bottom: 14px !important;
+    max-height: calc(100% - 82px) !important;
+  }
+  body.home #guide-grid .dashboard-card-content h2,
+  body.home #guide-grid .emergency-card .dashboard-card-content h2 {
+    font-size: clamp(1.15rem, 5vw, 1.5rem) !important;
+  }
+  body.home #guide-grid .dashboard-card-content > p:not(.card-label) {
+    font-size: .69rem !important;
+    line-height: 1.39 !important;
+  }
+  body.home #guide-grid .mini-links {
+    display: none !important;
+  }
+  body.home #guide-grid .card-symbol {
+    width: 36px !important;
+    height: 36px !important;
+    flex-basis: 36px !important;
+    font-size: 1rem !important;
+  }
+  .home-footer-nav {
+    display: grid !important;
+    grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+    width: 100% !important;
+  }
+  .home-footer-nav a {
+    text-align: center !important;
+  }
+  .home-footer-bottom {
+    flex-direction: column !important;
+    gap: 4px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  body.home #guide-grid.dashboard-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style></head>
 <body class="home physics-dashboard-page">
 <a class="skip-link" href="#guide-grid">Skip to guide</a>
 <div aria-hidden="true" class="physics-sky">
@@ -53,7 +348,7 @@
 <p>Five first-sem courses, grade mapping, books and a working SPI calculator.</p>
 <div class="mini-links"><span>Course guide</span><span>CPI explained</span><span>SPI calculator</span></div>
 </div>
-<span class="open-card">Open academics ↗</span>
+
 <span class="card-equation">SPI = Σ(cᵢgᵢ) / Σcᵢ</span>
 </a><a class="dashboard-card campus-card card-equal" data-tilt="" href="./campus-life.html">
 <img alt="Hostel area at IIT Bombay" onerror="this.style.display='none'" src="./assets/hostel-h13.webp"/>
@@ -65,8 +360,8 @@
 <p>Where to eat, what to pack and how to survive the first Mumbai monsoon.</p>
 <div class="mini-links"><span>Late-night food</span><span>Packing list</span></div>
 </div>
-<span class="open-card">Explore campus ↗</span>
-</a><a class="dashboard-card map-card card-equal" data-tilt="" href="./campus-map.html"><img alt="Illustrated IIT Bombay campus map" onerror="this.style.display='none'" src="./assets/iitb-campus-map.webp"/><div class="card-shade"></div><div class="card-topline"><span class="card-index">03</span><span class="card-symbol">🗺️</span></div><div class="dashboard-card-content"><p class="card-label">Campus · Department · Floors</p><h2>Interactive maps</h2><p>Search campus locations and open Physics Department floor layouts.</p><div class="mini-links"><span>Institute map</span><span>Department floors</span></div></div><span class="open-card">Open maps ↗</span></a><a class="dashboard-card transport-card card-equal" data-tilt="" href="./transport.html">
+
+</a><a class="dashboard-card map-card card-equal" data-tilt="" href="./campus-map.html"><img alt="Illustrated IIT Bombay campus map" onerror="this.style.display='none'" src="./assets/iitb-campus-map.webp"/><div class="card-shade"></div><div class="card-topline"><span class="card-index">03</span><span class="card-symbol">🗺️</span></div><div class="dashboard-card-content"><p class="card-label">Campus · Department · Floors</p><h2>Interactive maps</h2><p>Search campus locations and open Physics Department floor layouts.</p><div class="mini-links"><span>Institute map</span><span>Department floors</span></div></div></a><a class="dashboard-card transport-card card-equal" data-tilt="" href="./transport.html">
 <img alt="IIT Bombay main gate" onerror="this.style.display='none'" src="./assets/main-gate.webp"/>
 <div class="card-shade"></div>
 <div class="card-topline"><span class="card-index">04</span><span class="card-symbol">🚆</span></div>
@@ -75,7 +370,7 @@
 <h2>Getting to IITB</h2>
 <p>Simple arrival routes for freshers travelling with luggage and uncertain plans.</p>
 </div>
-<span class="open-card">Plan your route ↗</span>
+
 </a><a class="dashboard-card seniors-card card-equal" data-tilt="" href="./seniors.html">
 <div aria-hidden="true" class="portrait-stack physics-peer-stack">
 <span>ψ</span>
@@ -88,7 +383,7 @@
 <h2>Meet your seniors</h2>
 <p>Search internships, research areas, PoRs and hobbies across the batch.</p>
 </div>
-<span class="open-card">Browse profiles ↗</span>
+
 </a><a class="dashboard-card clubs-card card-equal" data-tilt="" href="./clubs.html">
 <img alt="IIT Bombay main building" onerror="this.style.display='none'" src="./assets/main-building.webp"/>
 <div class="card-shade"></div>
@@ -98,8 +393,8 @@
 <h2>Clubs &amp; student life</h2>
 <p>Find the communities you want before orientation-week information overload.</p>
 </div>
-<span class="open-card">Find a club ↗</span>
-</a><a class="dashboard-card updates-card card-equal" data-tilt="" href="./events.html"><div class="card-shade"></div><div class="card-topline"><span class="card-index">07</span><span class="card-symbol">🔔</span></div><div class="dashboard-card-content"><p class="card-label">Meetings · Webinars · Deadlines</p><h2>Events &amp; updates</h2><p>See timings and add reminders directly to your calendar.</p><div class="mini-links"><span>Meetings</span><span>Webinars</span><span>Deadlines</span></div></div><span class="open-card">Open updates ↗</span></a><a class="dashboard-card emergency-card card-equal" data-tilt="" href="./emergency.html">
+
+</a><a class="dashboard-card updates-card card-equal" data-tilt="" href="./events.html"><div class="card-shade"></div><div class="card-topline"><span class="card-index">07</span><span class="card-symbol">🔔</span></div><div class="dashboard-card-content"><p class="card-label">Meetings · Webinars · Deadlines</p><h2>Events &amp; updates</h2><p>See timings and add reminders directly to your calendar.</p><div class="mini-links"><span>Meetings</span><span>Webinars</span><span>Deadlines</span></div></div></a><a class="dashboard-card emergency-card card-equal" data-tilt="" href="./emergency.html">
 <div aria-hidden="true" class="emergency-rings"></div>
 <div class="card-topline"><span class="card-index">08</span><span class="card-symbol">🚑</span></div>
 <div class="dashboard-card-content">
@@ -109,10 +404,10 @@
 <strong class="emergency-number">112</strong>
 <div class="mini-links"><span>Campus QRT</span><span>Hospital</span></div>
 </div>
-<span class="open-card">View contacts ↗</span>
+
 </a></section>
-<footer aria-label="Website footer" class="dashboard-footer"><div class="dashboard-footer-main"><a class="dashboard-footer-brand" href="./index.html"><span aria-hidden="true" class="footer-atom">⚛</span><span><strong>IITB Physics Fresher Guide</strong><small>Everything important, one click away.</small></span></a><nav aria-label="Footer navigation" class="dashboard-footer-links"><a href="./academics.html">📚 Academics</a><a href="./campus-life.html">🏫 Campus</a><a href="./campus-map.html">🗺️ Maps</a><a href="./transport.html">🚆 Getting here</a><a href="./seniors.html">👥 Seniors</a><a href="./clubs.html">🎭 Clubs</a><a href="./events.html">🔔 Updates</a></nav><a class="dashboard-footer-emergency" href="./emergency.html">🚑 Emergency contacts</a></div><div class="dashboard-footer-meta"><p>Made by <strong>Ayushi Singh</strong> · Department Coordinator · Batch of ’27</p><p>Physics-first design · Clear symbols · Fast access</p></div></footer>
-</main>
+
+<footer aria-label="Website footer" class="home-footer-stable"><div class="home-footer-top"><a class="home-footer-brand" href="./index.html"><span aria-hidden="true">⚛</span><span><strong>IITB Physics Fresher Guide</strong><small>Everything important, one click away.</small></span></a><nav aria-label="Footer navigation" class="home-footer-nav"><a href="./academics.html">📚 Academics</a><a href="./campus-life.html">🏫 Campus</a><a href="./campus-map.html">🗺️ Maps</a><a href="./transport.html">🚆 Getting here</a><a href="./seniors.html">👥 Seniors</a><a href="./clubs.html">🎭 Clubs</a><a href="./events.html">🔔 Updates</a></nav><a class="home-footer-emergency" href="./emergency.html">🚑 Emergency contacts</a></div><div class="home-footer-bottom"><span>Made by <strong>Ayushi Singh</strong> · Department Coordinator · Batch of ’27</span><span>Physics-first design · Clear symbols · Fast access</span></div></footer></main>
 <script src="./site.js"></script>
 </body>
 </html>
