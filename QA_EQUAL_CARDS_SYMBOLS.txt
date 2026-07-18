@@ -1,0 +1,6 @@
+EQUAL CARDS + SYMBOL SYSTEM QA
+
+HTML files checked: 12
+Issues found: 0
+
+Duplicate-ID and JavaScript syntax checks passed.
